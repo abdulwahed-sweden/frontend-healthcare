@@ -16,40 +16,47 @@ interface StatCardProps {
 export function StatCard({ title, value, description, icon, className, importance = 'default' }: StatCardProps) {
   let cardClasses = "shadow-lg";
   let titleClasses = "text-sm font-medium";
-  let iconContainerClasses = ""; // For potential icon styling if needed, not directly color
+  let iconContainerClasses = ""; 
+  let valueClasses = "text-4xl font-bold text-foreground";
+  let descriptionClasses = "text-xs text-muted-foreground";
 
   switch (importance) {
     case 'info':
       cardClasses = cn(cardClasses, "bg-blue-100 border-2 border-blue-500");
       titleClasses = cn(titleClasses, "text-blue-700");
       iconContainerClasses = "text-blue-700";
+      valueClasses = cn(valueClasses, "text-blue-900"); // Darker blue for value
+      descriptionClasses = cn(descriptionClasses, "text-blue-600");
       break;
     case 'warning':
       cardClasses = cn(cardClasses, "bg-yellow-100 border-2 border-yellow-500");
       titleClasses = cn(titleClasses, "text-yellow-700");
       iconContainerClasses = "text-yellow-700";
+      valueClasses = cn(valueClasses, "text-yellow-900"); // Darker yellow for value
+      descriptionClasses = cn(descriptionClasses, "text-yellow-600");
       break;
     case 'success':
       cardClasses = cn(cardClasses, "bg-green-100 border-2 border-green-500");
       titleClasses = cn(titleClasses, "text-green-700");
       iconContainerClasses = "text-green-700";
+      valueClasses = cn(valueClasses, "text-green-900"); // Darker green for value
+      descriptionClasses = cn(descriptionClasses, "text-green-600");
       break;
     case 'default':
     default:
-      cardClasses = cn(cardClasses, "bg-card border border-muted");
+      cardClasses = cn(cardClasses, "bg-card border border-border"); // Changed border-muted to border-border
       titleClasses = cn(titleClasses, "text-muted-foreground");
       iconContainerClasses = "text-muted-foreground";
+      // valueClasses and descriptionClasses use their default foreground/muted-foreground
       break;
   }
 
   let finalIcon = icon;
   if (React.isValidElement(icon)) {
-    // Add importance-based color to the icon, preserving existing classes
     finalIcon = React.cloneElement(icon as React.ReactElement<any>, {
       className: cn((icon.props as any).className, iconContainerClasses)
     });
   }
-
 
   return (
     <Card className={cn(cardClasses, className)}>
@@ -58,8 +65,8 @@ export function StatCard({ title, value, description, icon, className, importanc
         {finalIcon}
       </CardHeader>
       <CardContent>
-        <div className="text-4xl font-bold text-foreground">{value}</div>
-        <p className="text-xs text-muted-foreground">{description}</p>
+        <div className={valueClasses}>{value}</div>
+        <p className={descriptionClasses}>{description}</p>
       </CardContent>
     </Card>
   );
