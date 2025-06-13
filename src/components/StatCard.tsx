@@ -11,14 +11,14 @@ interface StatCardProps {
 
 export function StatCard({ title, value, description, icon, className }: StatCardProps) {
   return (
-    <Card className={`shadow-lg bg-gradient-to-br from-primary to-primary/80 text-primary-foreground ${className}`}>
+    <Card className={`shadow-lg bg-card border-2 border-accent ${className}`}>
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-        <CardTitle className="text-sm font-medium">{title}</CardTitle>
+        <CardTitle className="text-sm font-medium text-accent">{title}</CardTitle>
         {icon}
       </CardHeader>
       <CardContent>
-        <div className="text-4xl font-bold">{value}</div>
-        <p className="text-xs text-primary-foreground/80">{description}</p>
+        <div className="text-4xl font-bold text-foreground">{value}</div>
+        <p className="text-xs text-muted-foreground">{description}</p>
       </CardContent>
     </Card>
   );
