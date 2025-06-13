@@ -75,6 +75,9 @@
 }
 
 @layer base {
+  html {
+    font-size: 1.2rem;
+  }
   :root {
     --background: 210 17% 98%;      /* لم يتغير */
     --foreground: 212 15% 34%;      /* لم يتغير */
