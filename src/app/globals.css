@@ -3,129 +3,79 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    font-size: 1.1rem;
+  }
   :root {
     --background: 210 17% 98%;      /* Tailwind gray-50 (#F9FAFB) */
-    --foreground: 212 15% 34%;      /* Tailwind gray-600 (#4B5563) */
+    --foreground: 212 10% 44%;      /* Tailwind gray-500 (#6B7280) */
 
     --muted: 215 16% 95%;           /* Tailwind gray-100 (#F3F4F6) */
     --muted-foreground: 213 10% 65%; /* Tailwind gray-400 (#9CA3AF) */
 
-    --popover: 0 0% 100%;           /* White */
-    --popover-foreground: 212 15% 34%; /* Tailwind gray-600 */
+    --popover: 0 0% 100%;           /* White (#FFFFFF) */
+    --popover-foreground: 213 20% 27%; /* Tailwind gray-700 (#374151) */
 
-    --card: 0 0% 100%;              /* White */
-    --card-foreground: 212 15% 34%;   /* Tailwind gray-600 */
+    --card: 0 0% 100%;              /* White (#FFFFFF) */
+    --card-foreground: 213 20% 27%;   /* Tailwind gray-700 (#374151) */
 
     --border: 215 14% 92%;          /* Tailwind gray-200 (#E5E7EB) */
     --input: 215 14% 92%;           /* Tailwind gray-200 (#E5E7EB) */
 
-    --primary: 174 34% 63%;         /* ProRenata Green (#81C7BD) */
-    --primary-foreground: 174 34% 92%; /* Light variant (#EAFBF9) */
+    --primary: 217 91% 60%;         /* Tailwind blue-500 (#3B82F6) */
+    --primary-foreground: 216 100% 97%; /* Tailwind blue-50 (#EFF6FF) */
 
     --secondary: 217 90% 92%;       /* Tailwind blue-100 (#DBEAFE) */
-    --secondary-foreground: 217 75% 45%; /* Tailwind blue-600 (#2563EB) */
+    --secondary-foreground: 217 83% 53%; /* Tailwind blue-600 (#2563EB) */
 
     --accent: 223 70% 40%;          /* Tailwind blue-800 (#1E40AF) */
-    --accent-foreground: 0 0% 100%; /* White */
+    --accent-foreground: 0 0% 100%; /* White (#FFFFFF) */
 
-    --destructive: 0 72% 51%;       /* Default ShadCN Red */
-    --destructive-foreground: 0 0% 100%; /* White */
+    --destructive: 0 84% 60%;       /* Tailwind red-500 (#EF4444) */
+    --destructive-foreground: 0 0% 100%; /* White (#FFFFFF) */
 
-    --ring: 174 34% 63%;            /* Same as primary */
+    --ring: 217 91% 60%;            /* Tailwind blue-500 (#3B82F6) */
 
     --radius: 0.5rem;
 
-    --chart-1: 174 34% 63%;         /* Primary Green */
-    --chart-2: 223 70% 40%;         /* Accent */
-    --chart-3: 217 80% 70%;         /* Tailwind blue-400 (#60A5FA) */
-    --chart-4: 223 60% 55%;         /* Tailwind blue-700 (#1D4ED8) */
-    --chart-5: 213 10% 65%;         /* Tailwind gray-400 (#9CA3AF) */
+    --chart-1: 217 91% 60%;         /* blue-500 */
+    --chart-2: 223 70% 40%;         /* blue-800 */
+    --chart-3: 217 94% 67%;         /* blue-400 */
+    --chart-4: 222 69% 49%;         /* blue-700 */
+    --chart-5: 213 10% 65%;         /* gray-400 */
   }
 
   .dark {
-    --background: 215 28% 17%;      /* Tailwind gray-800 (#1F2937) */
+    --background: 222 47% 11%;      /* Tailwind gray-900 (#111827) */
     --foreground: 210 14% 87%;      /* Tailwind gray-300 (#D1D5DB) */
 
-    --muted: 212 15% 34%;           /* Tailwind gray-600 (#4B5563) */
-    --muted-foreground: 213 10% 65%; /* Tailwind gray-400 (#9CA3AF) */
+    --muted: 215 28% 17%;           /* Tailwind gray-800 (#1F2937) */
+    --muted-foreground: 212 10% 44%; /* Tailwind gray-500 (#6B7280) */
 
-    --popover: 213 20% 27%;         /* Tailwind gray-700 (#374151) */
-    --popover-foreground: 210 14% 87%; /* Tailwind gray-300 */
+    --popover: 215 28% 17%;         /* Tailwind gray-800 (#1F2937) */
+    --popover-foreground: 210 14% 87%; /* Tailwind gray-300 (#D1D5DB) */
 
-    --card: 213 20% 27%;            /* Tailwind gray-700 (#374151) */
-    --card-foreground: 210 14% 87%;   /* Tailwind gray-300 */
+    --card: 215 28% 17%;            /* Tailwind gray-800 (#1F2937) */
+    --card-foreground: 210 14% 87%;   /* Tailwind gray-300 (#D1D5DB) */
 
-    --border: 212 15% 34%;          /* Tailwind gray-600 (#4B5563) */
-    --input: 212 15% 34%;           /* Tailwind gray-600 (#4B5563) */
+    --border: 213 20% 27%;          /* Tailwind gray-700 (#374151) */
+    --input: 213 20% 27%;           /* Tailwind gray-700 (#374151) */
 
-    --primary: 174 34% 63%;         /* ProRenata Green (#81C7BD) */
-    --primary-foreground: 174 34% 92%; /* Light variant (#EAFBF9) */
+    --primary: 217 91% 60%;         /* Tailwind blue-500 (#3B82F6) */
+    --primary-foreground: 216 100% 97%; /* Tailwind blue-50 (#EFF6FF) */
 
-    --secondary: 212 15% 34%;       /* Tailwind gray-600 (#4B5563) */
-    --secondary-foreground: 210 14% 87%; /* Tailwind gray-300 */
+    --secondary: 215 28% 17%;       /* Tailwind gray-800 (#1F2937) */
+    --secondary-foreground: 217 94% 67%; /* Tailwind blue-400 (#60A5FA) */
 
-    --accent: 217 80% 70%;          /* Tailwind blue-400 (#60A5FA) */
-    --accent-foreground: 223 70% 20%; /* Tailwind blue-900 (#1E3A8A) */
+    --accent: 217 94% 67%;          /* Tailwind blue-400 (#60A5FA) */
+    --accent-foreground: 222 47% 11%; /* Tailwind gray-900 (#111827) for contrast with blue-400 */
 
-    --destructive: 0 63% 51%;       /* Default ShadCN Dark Red */
-    --destructive-foreground: 0 0% 100%; /* White */
+    --destructive: 0 84% 60%;       /* Tailwind red-500 (#EF4444) */
+    --destructive-foreground: 0 0% 100%; /* White (#FFFFFF) */
 
-    --ring: 174 34% 63%;            /* Same as primary */
-  }
-}
-
-@layer base {
-  html {
-    font-size: 1.2rem;
-  }
-  :root {
-    --background: 210 17% 98%;      /* لم يتغير */
-    --foreground: 212 15% 34%;      /* لم يتغير */
-
-    --muted: 215 16% 95%;           /* لم يتغير */
-    --muted-foreground: 213 10% 65%; /* لم يتغير */
-
-    --popover: 0 0% 100%;           /* لم يتغير */
-    --popover-foreground: 212 15% 34%; /* لم يتغير */
-
-    --card: 0 0% 100%;              /* لم يتغير */
-    --card-foreground: 212 15% 34%;   /* لم يتغير */
-
-    --border: 215 14% 92%;          /* لم يتغير */
-    --input: 215 14% 92%;           /* لم يتغير */
-
-    /* التعديل الرئيسي: اللون الأخضر أصبح أغمق */
-    --primary: 174 44% 48%;         /* كان 174 34% 63% (أغمق بـ 15%) */
-    --primary-foreground: 174 44% 92%; /* تم تعديله ليتناسق مع --primary الجديد */
-
-    --secondary: 217 90% 92%;       /* لم يتغير */
-    --secondary-foreground: 217 75% 45%; /* لم يتغير */
-
-    --accent: 223 70% 40%;          /* لم يتغير */
-    --accent-foreground: 0 0% 100%; /* لم يتغير */
-
-    --destructive: 0 72% 51%;       /* لم يتغير */
-    --destructive-foreground: 0 0% 100%; /* لم يتغير */
-
-    --ring: 174 44% 48%;            /* متوافق مع --primary الجديد */
-
-    --radius: 0.5rem;
-
-    /* تحديث ألوان الرسوم البيانية لتناسب اللون الجديد */
-    --chart-1: 174 44% 48%;         /* متوافق مع --primary */
-    --chart-2: 223 70% 40%;         /* لم يتغير */
-    --chart-3: 217 80% 70%;         /* لم يتغير */
-    --chart-4: 223 60% 55%;         /* لم يتغير */
-    --chart-5: 213 10% 65%;         /* لم يتغير */
-  }
-
-  .dark {
-    /* النسخة الدارك - تم تعديل الألوان المرتبطة بـ --primary فقط */
-    --primary: 174 44% 48%;         /* نفس القيمة كالوضع الفاتح */
-    --primary-foreground: 174 44% 92%; /* محدث ليتناسق */
-    --ring: 174 44% 48%;            /* محدث */
+    --ring: 217 91% 60%;            /* Tailwind blue-500 (#3B82F6) */
     
-    /* باقي الألوان تبقى كما هي */
+    /* Chart colors in dark mode will use the dark theme's primary/accent/gray shades or inherit from light if not specified */
   }
 }
 
