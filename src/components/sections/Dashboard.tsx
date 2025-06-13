@@ -27,10 +27,34 @@ export default function DashboardSection() {
       <h2 className="text-2xl font-semibold font-headline">Dagens översikt</h2>
       
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-        <StatCard title="Registrerade Elever" value="247" description="Totalt antal elever" icon={<Users className="h-6 w-6 text-accent" />} />
-        <StatCard title="Bokningar Idag" value="8" description="Planerade och genomförda" icon={<CalendarClock className="h-6 w-6 text-accent" />} />
-        <StatCard title="Väntande Vaccinationer" value="3" description="Kommande denna vecka" icon={<ShieldAlert className="h-6 w-6 text-accent" />} />
-        <StatCard title="Aktiva Medicinska Ärenden" value="12" description="Pågående uppföljningar" icon={<Activity className="h-6 w-6 text-accent" />} />
+        <StatCard 
+          title="Registrerade Elever" 
+          value="247" 
+          description="Totalt antal elever" 
+          icon={<Users className="h-6 w-6" />} 
+          importance="default" 
+        />
+        <StatCard 
+          title="Bokningar Idag" 
+          value="8" 
+          description="Planerade och genomförda" 
+          icon={<CalendarClock className="h-6 w-6" />} 
+          importance="info" 
+        />
+        <StatCard 
+          title="Väntande Vaccinationer" 
+          value="3" 
+          description="Kommande denna vecka" 
+          icon={<ShieldAlert className="h-6 w-6" />} 
+          importance="warning" 
+        />
+        <StatCard 
+          title="Aktiva Medicinska Ärenden" 
+          value="12" 
+          description="Pågående uppföljningar" 
+          icon={<Activity className="h-6 w-6" />} 
+          importance="success" 
+        />
       </div>
 
       <Alert className="bg-accent/30 border-accent">
